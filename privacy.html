@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="テクネスタのプライバシーポリシーページです。個人情報の取り扱いについてご説明します。">
+    <title>プライバシーポリシー | テクネスタ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-hero {
+            padding: 160px 24px 80px;
+            background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .privacy-hero h1 {
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .privacy-hero p {
+            font-size: 15px;
+            opacity: 0.8;
+        }
+
+        .privacy-content {
+            padding: 80px 0 120px;
+            background: white;
+        }
+
+        .privacy-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .privacy-section {
+            margin-bottom: 56px;
+        }
+
+        .privacy-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-100);
+            position: relative;
+        }
+
+        .privacy-section h2::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        .privacy-section h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin: 20px 0 10px;
+        }
+
+        .privacy-section p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+
+        .privacy-section ul {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        .privacy-section ul li {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.9;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .privacy-section ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            background: var(--primary-400);
+            border-radius: 50%;
+        }
+
+        .privacy-section ol {
+            margin: 12px 0;
+            padding-left: 0;
+            list-style: none;
+            counter-reset: privacy-counter;
+        }
+
+        .privacy-section ol li {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.9;
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 8px;
+            counter-increment: privacy-counter;
+        }
+
+        .privacy-section ol li::before {
+            content: counter(privacy-counter) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 600;
+            color: var(--primary-600);
+            font-size: 14px;
+        }
+
+        .privacy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .privacy-table th,
+        .privacy-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .privacy-table tr:last-child th,
+        .privacy-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .privacy-table th {
+            background: var(--primary-50);
+            font-weight: 600;
+            color: var(--primary-800);
+            width: 30%;
+            vertical-align: top;
+        }
+
+        .privacy-table td {
+            color: var(--gray-700);
+            background: var(--gray-50);
+        }
+
+        .privacy-subsection {
+            margin-top: 24px;
+            padding: 20px 24px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            border-left: 3px solid var(--primary-400);
+        }
+
+        .privacy-subsection h3 {
+            margin-top: 0;
+            color: var(--primary-700);
+            font-size: 15px;
+        }
+
+        .privacy-subsection p {
+            margin-bottom: 8px;
+        }
+
+        .privacy-subsection ul {
+            margin: 8px 0;
+        }
+
+        .privacy-date {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--gray-200);
+            text-align: right;
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        .privacy-back {
+            margin-bottom: 48px;
+        }
+
+        .privacy-back a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary-600);
+            transition: gap 0.2s ease;
+        }
+
+        .privacy-back a:hover {
+            gap: 12px;
+        }
+
+        .privacy-back svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .privacy-intro {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.9;
+            padding: 20px 24px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 140px 20px 60px;
+            }
+
+            .privacy-content {
+                padding: 60px 0 80px;
+            }
+
+            .privacy-table th {
+                width: 40%;
+            }
+
+            .privacy-table th,
+            .privacy-table td {
+                padding: 10px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header scrolled">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">T</div>
+                <span>テクネスタ</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="index.html#about">私たちについて</a></li>
+                <li><a href="index.html#services">サービス</a></li>
+                <li><a href="index.html#company">会社概要</a></li>
+                <li><a href="index.html#contact" class="nav-cta">お問い合わせ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="privacy-hero">
+        <h1>プライバシーポリシー</h1>
+        <p>テクネスタ　制定日：2026年4月19日</p>
+    </div>
+
+    <main class="privacy-content">
+        <div class="privacy-inner">
+            <div class="privacy-back">
+                <a href="index.html">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 5l-7 7 7 7"/>
+                    </svg>
+                    トップページに戻る
+                </a>
+            </div>
+
+            <p class="privacy-intro">テクネスタ（以下「当社」）は、当社が提供するサービス（以下「当社サービス」）における利用者の個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
+
+            <div class="privacy-section">
+                <h2>1. 事業者情報</h2>
+                <table class="privacy-table">
+                    <tbody>
+                        <tr>
+                            <th>名称</th>
+                            <td>テクネスタ</td>
+                        </tr>
+                        <tr>
+                            <th>お問い合わせ</th>
+                            <td>本ポリシー末尾のお問い合わせ先をご参照ください</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="privacy-section">
+                <h2>2. 収集する情報</h2>
+                <p>当社サービスでは、利用者からの問い合わせへの対応や、サービスの提供・改善のために以下の情報を収集することがあります。</p>
+
+                <div class="privacy-subsection">
+                    <h3>2-1. お問い合わせ時</h3>
+                    <ul>
+                        <li>氏名またはニックネーム</li>
+                        <li>メールアドレス</li>
+                        <li>お問い合わせ内容</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-subsection">
+                    <h3>2-2. 各サービス共通</h3>
+                    <ul>
+                        <li>サービスの利用状況（アクセスログ等）</li>
+                        <li>デバイス情報（機種・OSバージョン等）</li>
+                    </ul>
+                    <p>当社ウェブサイトでは、サービス改善を目的としてアクセス解析ツールを利用することがあります。アクセス解析ツールはCookieなどを使用して情報を収集しますが、個人を特定する情報は含まれません。</p>
+                </div>
+
+                <div class="privacy-subsection">
+                    <h3>2-3. スタディクラフト（StudyCraft）における収集情報</h3>
+                    <p>スタディクラフトは学習管理アプリです。以下の情報を収集することがあります。</p>
+
+                    <h3>アカウント情報（任意・サインイン時のみ）</h3>
+                    <p>本サービスはサインインなしでも多くの機能をご利用いただけます。外部アカウント（Apple等）でサインインを行った場合のみ、以下の情報を取得します。</p>
+                    <ul>
+                        <li>サインインに使用した外部アカウントに紐づくメールアドレス（またはリレーアドレス）</li>
+                        <li>表示名（外部アカウントの設定による）</li>
+                    </ul>
+
+                    <h3>学習データ</h3>
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>データ種別</th>
+                                <th>保存先</th>
+                                <th>対象ユーザー</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>作成した問題・回答記録</td>
+                                <td>端末内</td>
+                                <td>全ユーザー</td>
+                            </tr>
+                            <tr>
+                                <td>学習統計・復習スケジュール</td>
+                                <td>端末内</td>
+                                <td>全ユーザー</td>
+                            </tr>
+                            <tr>
+                                <td>マスターデータ（科目・単元等）</td>
+                                <td>端末内</td>
+                                <td>全ユーザー</td>
+                            </tr>
+                            <tr>
+                                <td>上記データのバックアップ</td>
+                                <td>国内のクラウドサービス事業者</td>
+                                <td>有料プランのみ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>AI機能の利用時</h3>
+                    <p>「AI問題生成」または「問題集取り込み」機能を使用した場合、入力したテキストや画像がAI処理サービス事業者へ送信されます。送信されるのは問題生成のための内容のみであり、氏名・連絡先等の個人を特定できる情報は含まれません。</p>
+
+                    <h3>広告（フリープランのみ）</h3>
+                    <p>フリープランでは第三者の広告配信サービスによる広告を表示します。広告配信事業者は広告配信のために以下の情報を自動的に収集することがあります。</p>
+                    <ul>
+                        <li>広告識別子（IDFA）</li>
+                        <li>デバイス情報（機種、OSバージョン等）</li>
+                        <li>広告の表示・クリック履歴</li>
+                    </ul>
+                    <p>詳細は各広告配信事業者のプライバシーポリシーをご参照ください。有料プランご利用の場合、広告は表示されません。</p>
+
+                    <h3>購入情報</h3>
+                    <p>アプリ内課金（サブスクリプション・クレジットパック）の決済はすべてアプリストアの決済機能を通じて行われます。当社はカード番号等の決済情報を取得・保持しません。購入レシートは購入確認・不正利用防止および法令上必要な期間の保存のためにのみ使用します。</p>
+                </div>
+            </div>
+
+            <div class="privacy-section">
+                <h2>3. 情報の利用目的</h2>
+                <p>収集した情報は以下の目的のために使用します。</p>
+                <ol>
+                    <li>当社サービスの提供・運営・改善</li>
+                    <li>お問い合わせへの対応</li>
+                    <li>クラウドバックアップおよびデバイス間同期（スタディクラフト有料プランのみ）</li>
+                    <li>AI問題生成機能の提供（スタディクラフト）</li>
+                    <li>サブスクリプション・クレジットの管理（スタディクラフト）</li>
+                    <li>不正利用の防止およびセキュリティの確保</li>
+                    <li>サービス品質向上のための統計分析（個人を特定しない形での利用を含む）</li>
+                </ol>
+            </div>
+
+            <div class="privacy-section">
+                <h2>4. 第三者への提供</h2>
+                <p>当社は、以下の場合を除き、利用者の個人情報を第三者に提供しません。</p>
+                <ul>
+                    <li>利用者本人の同意がある場合</li>
+                    <li>法令に基づく開示が必要な場合</li>
+                    <li>人の生命・身体・財産の保護のために必要であり、利用者本人の同意を得ることが困難な場合</li>
+                    <li>公共の利益のために必要であり、利用者本人の同意を得ることが困難な場合</li>
+                    <li>サービス提供のための<strong>業務委託先</strong>（クラウドサービス事業者・AI処理サービス事業者等）への提供</li>
+                    <li>スタディクラフトの広告配信のための<strong>広告配信事業者</strong>への提供（フリープランのみ）</li>
+                </ul>
+                <p>業務委託先への提供は、サービス提供に必要な範囲に限定し、合理的な安全管理措置を講じます。広告配信事業者は広告配信のために独自の目的でデータを利用することがあります。詳細は各事業者のプライバシーポリシーをご参照ください。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>5. 情報の保管・管理</h2>
+                <table class="privacy-table">
+                    <thead>
+                        <tr>
+                            <th>データ</th>
+                            <th>保管場所</th>
+                            <th>保管期間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>お問い合わせ情報</td>
+                            <td>当社管理環境</td>
+                            <td>当社が定める期間</td>
+                        </tr>
+                        <tr>
+                            <td>購入レシート</td>
+                            <td>当社管理環境</td>
+                            <td>法令に定める期間</td>
+                        </tr>
+                        <tr>
+                            <td>端末内データ（スタディクラフト）</td>
+                            <td>利用者の端末</td>
+                            <td>アプリ削除まで</td>
+                        </tr>
+                        <tr>
+                            <td>クラウドデータ（スタディクラフト有料）</td>
+                            <td>国内のクラウドサービス事業者</td>
+                            <td>有料プラン解約後、当社が定める期間</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>スタディクラフトのクラウドデータは、有料プランの解約後、当社が定める一定期間が経過した後に削除します。アカウント削除機能（設定 → アカウント削除）を使用すると、クラウド上のデータの削除処理を開始します。なお、バックアップ等の技術的な都合により、完全な削除には一定の時間を要する場合があります。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>6. 利用者の権利</h2>
+                <p>利用者は原則として以下の操作を行うことができます。</p>
+                <ul>
+                    <li><strong>個人情報の開示・訂正・削除・利用停止の請求</strong>：下記お問い合わせ先までご連絡ください。遅滞なく対応します</li>
+                    <li><strong>スタディクラフトのデータ削除</strong>：アプリの設定画面から端末内データの削除が可能です</li>
+                    <li><strong>スタディクラフトのアカウント削除</strong>：設定 → アカウント削除 から、クラウド上のデータおよびアカウントの削除処理を開始できます</li>
+                    <li><strong>広告識別子のリセット</strong>：ご利用端末の設定から、広告識別子のリセットや広告トラッキングの無効化ができます</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>7. 情報漏洩時の対応</h2>
+                <p>個人情報の漏洩その他の事態が発生した場合、当社は個人情報保護法その他の関係法令に従い、適切な調査・是正措置を講じるとともに、法令上必要な場合は監督機関への報告および利用者への通知を行います。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>8. 免責事項</h2>
+                <p>当社は、以下の場合において発生した損害について、当社の故意または重過失による場合を除き、責任を負いかねます。</p>
+                <ul>
+                    <li>利用者自身の操作による個人情報の漏洩</li>
+                    <li>不可抗力（自然災害・停電・通信障害等）によるサービス停止またはデータ損失</li>
+                    <li>当社が合理的な安全管理措置を講じたにもかかわらず発生した第三者による不正アクセス等による情報漏洩</li>
+                    <li>広告配信事業者・AI処理サービス事業者等の第三者によるデータの取り扱い</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>9. 子どものプライバシー</h2>
+                <p>当社は、13歳未満の児童から意図的に個人情報を収集しません。13歳未満の方が当社サービスをご利用になる場合は、保護者の同意のもとでご使用ください。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>10. 準拠法および管轄裁判所</h2>
+                <p>本ポリシーは日本法に準拠します。本ポリシーに関する一切の紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>11. お問い合わせ</h2>
+                <p>本ポリシーに関するご質問・個人情報の開示・訂正・削除・利用停止のご請求は以下までお問い合わせください。</p>
+                <p><strong>メール：</strong><span id="privacy-email">読み込み中...</span></p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>12. ポリシーの変更</h2>
+                <p>当社は、必要に応じて本ポリシーを変更することがあります。変更内容は当社ウェブサイト等への掲載をもってお知らせします。利用者の権利に重大な影響を及ぼす変更の場合は、改めて同意をお願いする場合があります。</p>
+            </div>
+
+            <div class="privacy-date">
+                <p>最終更新日：2026年4月19日</p>
+                <p>テクネスタ</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo">
+                            <div class="logo-icon">T</div>
+                            <span>テクネスタ</span>
+                        </a>
+                        <p>ITの力でお客様のビジネス課題を解決します。</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>サービス</h4>
+                        <ul>
+                            <li><a href="index.html#services">システム開発・保守</a></li>
+                            <li><a href="index.html#services">クラウドサービス</a></li>
+                            <li><a href="index.html#services">ITコンサルティング</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>会社情報</h4>
+                        <ul>
+                            <li><a href="index.html#about">私たちについて</a></li>
+                            <li><a href="index.html#company">会社概要</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>お問い合わせ</h4>
+                        <ul>
+                            <li><a href="index.html#contact">お問い合わせ</a></li>
+                            <li><a href="#" id="footer-email">メールアドレス</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 テクネスタ All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">プライバシーポリシー</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const user = 'info';
+        const domain = 'tecnesta.co.jp';
+
+        const privacyEmail = document.getElementById('privacy-email');
+        if (privacyEmail) {
+            const a = document.createElement('a');
+            a.textContent = user + '@' + domain;
+            a.href = 'mail' + 'to:' + user + '@' + domain;
+            privacyEmail.replaceWith(a);
+        }
+
+        const footerEmailLink = document.getElementById('footer-email');
+        if (footerEmailLink) {
+            footerEmailLink.textContent = user + '@' + domain;
+            footerEmailLink.href = 'mail' + 'to:' + user + '@' + domain;
+        }
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
